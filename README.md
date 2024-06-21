@@ -16,7 +16,8 @@ For each data pointed needed in one of the final plots, SPI statistics are inter
 
 Boundaries from Temperate Praries, West-Central Semi-Arid Praries, and South-Central Semi-Arid Praries are brought in from [EPA Level II Ecoregions]([url](https://www.epa.gov/eco-research/ecoregions-north-america))
 
-<img width="833" alt="Screenshot 2024-06-21 at 12 26 39 PM" src="https://github.com/nathanchou21/2024SummerResearch/assets/122398993/9664ad5c-6e26-473a-81fa-4eb0db45b048">
+<img width="917" alt="Screenshot 2024-06-21 at 1 17 37 PM" src="https://github.com/nathanchou21/2024SummerResearch/assets/122398993/d7d93bcb-03fb-4b1a-8354-6842823cc2ca">
+
 
 Additionally categories of Northern Praries and Southern Praries are created by spliting the ecoregions along the Latitude line 42.3.
 <img width="833" alt="Screenshot 2024-06-21 at 12 26 39 PM" src="https://github.com/nathanchou21/2024SummerResearch/assets/122398993/0e73c108-a5e6-40b5-b12e-7331247c3046">
