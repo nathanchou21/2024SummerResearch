@@ -93,8 +93,8 @@ def cleanData():
     #Split ecoregions into north and south
     line = LineString([(180, latitude), (-180, latitude)])
     lineGdf = gpd.GeoDataFrame(pd.DataFrame({'a': ['x']}), geometry=[line], crs='EPSG:4326')
-    lineGdf.to_file(dirPath + "/latLine.shp", driver="ESRI Shapefile")
-    addOrReplaceVLayer(dirPath + "/latLine.shp", "latLine", "latLine")
+    lineGdf.to_file(dirPath + "/latitude line/latLine.shp", driver="ESRI Shapefile")
+    addOrReplaceVLayer(dirPath + "/latitude line/latLine.shp", "latLine", "latLine")
     lineLayer = project.mapLayersByName('latLine')[0]
     processing.run("native:splitwithlines", {
     'INPUT': ecoregionLayer,
@@ -234,8 +234,8 @@ def prepareAndPlot(layerName):
             axs[int(index[0])-1,int(index[1])-1].set_xlabel("Year: 2019-2023", fontsize=8)
             axs[int(index[0])-1,int(index[1])-1].set_ylabel("Average Spi", fontsize=8)
          plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05, wspace=0.4, hspace=0.6)
-         plt.suptitle(set + " annual SPI based on different portions of the year. Each months average spi calculated with " +  layerName[-1] +"  month rolling average")
-         plt.savefig(dirPath + '/final plots/' + set + " using " +  layerName[-1] +"  month(s) rolling avg" + '.png')
+         plt.suptitle("Annual SPIs in the " + set + " Region, Calculated With " +  layerName[-1] +" Month SPI Data")
+         plt.savefig(dirPath + '/final plots/' + set + " using " +  layerName[-1] +"  month(s) SPI data" + '.png')
 
 
 
