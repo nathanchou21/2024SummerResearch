@@ -26,4 +26,5 @@ Annaul SPIs are calculated within the different regions in a variety of ways (lo
 
 Final Plots can be seen in the ["final plots folder" ](https://github.com/nathanchou21/2024SummerResearch/tree/main/final%20plots). One example is pictured below, showing a number of plots for the Northern Praries using 1 month SPI data and annual SPI calculated based on a variety of time ranges within the year. 
 
-<img width="920" alt="Screenshot 2024-06-21 at 1 13 02 PM" src="https://github.com/nathanchou21/2024SummerResearch/assets/122398993/d122b14d-93c3-4ad1-8828-7c67ae0bd198">
+<img width="821" alt="Screenshot 2024-06-21 at 1 54 54 PM" src="https://github.com/nathanchou21/2024SummerResearch/assets/122398993/f5be4058-7e14-4077-91bf-f311f7db529c">
+
