@@ -1,14 +1,18 @@
 import os 
+import re
 import pandas as pd
+from shapely.geometry import LineString
 import geopandas as gpd
+import numpy as np
 from PyQt5.QtCore import QVariant
-
+import matplotlib.pyplot as plt
 
 project = QgsProject.instance()
 #TODO make this look at where the code is running once I stop running from the python console 
-dirPath = "/Users/nathanchou/Desktop/Nathan Chou Summer 2024 Research"
+dirPath = "/Users/nathanchou/Desktop/2024SummerResearch"
 originalDataPath = dirPath + "/originalData"
 months = [ "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+latitude = 42.305
 
 #Helper Functions
 def deleteLayer(layerName):
@@ -16,7 +20,7 @@ def deleteLayer(layerName):
         if layer.name() == layerName:
             project.removeMapLayer(layer)
 
-
+#TODO. Should return, and should have optional replace parameter
 def addOrReplaceLayer(path, layerToDelete, layerName, type):
     deleteLayer(layerToDelete)
     deleteLayer(layerName)
@@ -78,112 +82,165 @@ def cleanData():
     'OUTPUT':dirPath + "/ecoregionFiles/reprojected.shp"})
     addOrReplaceVLayer(dirPath + "/ecoregionFiles/reprojected.shp", "ecoregions", "ecoregionsReprojected")
 
-def labelStiationsWithEcoregions():
-    #Add ecoregions field to stations
-    processing.run("native:joinattributesbylocation", 
-    {'INPUT': dirPath + '/stationFiles/stationsGdf.shp',
-    'PREDICATE':[5],'JOIN':dirPath + "/ecoregionFiles/reprojected.shp",
-    'JOIN_FIELDS':['NA_L2CODE'],
-    'METHOD':1,
-    'DISCARD_NONMATCHING':False,
-    'PREFIX':'',
-    'OUTPUT':dirPath + '/stationFiles/stationsWithEcoregions.shp'})
-    addOrReplaceVLayer(dirPath + '/stationFiles/stationsWithEcoregions.shp', "stationsGdf", "stationsWithEcoregions")
+    #delete irrelevant ecoregions
+    ecoregionLayer = project.mapLayersByName('ecoregionsReprojected')[0]
+    ecoregionLayer.startEditing()
+    for ecoregion in ecoregionLayer.getFeatures():
+        if (not re.match("9\.(2|3|4)", ecoregion['NA_L2CODE'])):
+            ecoregionLayer.deleteFeature(ecoregion.id())
+    ecoregionLayer.commitChanges()
+            
+    #Split ecoregions into north and south
+    line = LineString([(180, latitude), (-180, latitude)])
+    lineGdf = gpd.GeoDataFrame(pd.DataFrame({'a': ['x']}), geometry=[line], crs='EPSG:4326')
+    lineGdf.to_file(dirPath + "/latLine.shp", driver="ESRI Shapefile")
+    addOrReplaceVLayer(dirPath + "/latLine.shp", "latLine", "latLine")
+    lineLayer = project.mapLayersByName('latLine')[0]
+    processing.run("native:splitwithlines", {
+    'INPUT': ecoregionLayer,
+    'LINES': lineLayer,
+    'OUTPUT': dirPath + "/ecoregionFiles/splitNS.shp"
+    })
+    addOrReplaceVLayer(dirPath + "/ecoregionFiles/splitNS.shp", "ecoregionsReprojected", "ecoregionsSplitNS")
+    #Label each region as north or south
+    splitLayer = project.mapLayersByName('ecoregionsSplitNS')[0]
+    splitLayer.startEditing()
+    splitLayer.addAttribute(QgsField("NS", QVariant.Double))
+    splitLayer.updateFields()
+    for region in splitLayer.getFeatures():
+        ns = (region.geometry().centroid().asPoint().y() > latitude)
+        region.setAttribute("NS", QVariant(True) if ns else QVariant(False))
+        splitLayer.updateFeature(region)
+    splitLayer.commitChanges()
+
+
+# def labelStiationsWithEcoregions():
+#     #Add ecoregions field to stations
+#     processing.run("native:joinattributesbylocation", 
+#     {'INPUT': dirPath + '/stationFiles/stationsGdf.shp',
+#     'PREDICATE':[5],'JOIN':dirPath + "/ecoregionFiles/reprojected.shp",
+#     'JOIN_FIELDS':['NA_L2CODE'],
+#     'METHOD':1,
+#     'DISCARD_NONMATCHING':False,
+#     'PREFIX':'',
+#     'OUTPUT':dirPath + '/stationFiles/stationsWithEcoregions.shp'})
+#     addOrReplaceVLayer(dirPath + '/stationFiles/stationsWithEcoregions.shp', "stationsGdf", "stationsWithEcoregions")
     
 
 def calculateAverageSpi():
     
+    #For loops for all the differernt variations
     stationLayer = project.mapLayersByName('stationsGdf')[0]
     stationLayer.startEditing()
-    #vectorLayer = project.mapLayersByName('ecoregionsReprojected')[0]
-    #vectorLayer.startEditing()
-    oldAdress = dirPath +'/ecoregionFiles/reprojected.shp'
-    for rollingLength in range(1,2):
+    # Using 1,2,3 month rolling average data provided
+    for rollingLength in range(1,4):
         spiDf = pd.read_pickle(dirPath + "/spiDf-rollingMonths"+str(rollingLength))
-        for startMonth in range(1,2):#len(months)):
-            for endMonth in range(4,5):#startmonth, len(months)):
-
-                annualAverage = [] 
-
-                for year in range(2019, 2020):
-                    attribute = months[startMonth] + "-" + months[endMonth]+ "|"+str(year-2000)+"_" + str(rollingLength)
+        currentAdress = dirPath +'/ecoregionFiles/splitNS.shp'
+        #We will calculate each years average from a variety of start months to end months
+        for startMonth in range(1,8):
+            for endMonth in range(startMonth,8):
+                # Looking across years from 2019 to 2023
+                for year in range(2019, 2024):
+                    attribute = months[startMonth-1] + "-" + months[endMonth-1]+ "|"+str(year-2000)+"_" + str(rollingLength)
                     stationLayer.addAttribute(QgsField(attribute, QVariant.Double))
 
                     start_date = pd.to_datetime(str(year) + "-" + str(startMonth), format='%Y-%m')
                     end_date = pd.to_datetime(str(year) + "-" + str(endMonth), format='%Y-%m')
                     boundedSpiDf = spiDf.loc[:, (spiDf.columns >= start_date) & (spiDf.columns <= end_date)]
                     
-                    
+                    # each station gets its average spi for each variation added to its attribute table
                     for station in stationLayer.getFeatures():
                         qvariant_double = QVariant(float(boundedSpiDf.loc[station['Station']].mean()))
                         station[attribute] = qvariant_double
                         stationLayer.updateFeature(station)
                     
+                    # An interpolation is created to fill in the areas between attributes
                     attributeIdx = stationLayer.fields().indexOf(attribute)
                     processing.run("qgis:idwinterpolation", 
                     {'INTERPOLATION_DATA':dirPath + '/stationFiles/stationsGdf.shp::~::0::~::'+str(attributeIdx)+'::~::0',
                     'DISTANCE_COEFFICIENT':99,
                     'EXTENT':'-116.038827519,-89.618012962,28.596182276,54.486221541 [EPSG:4326]',
-                    'PIXEL_SIZE':0.25,
+                    'PIXEL_SIZE':0.5,
                     'OUTPUT':dirPath + '/interpolatedSpi/'+ attribute + ".tif"})
-                    addOrReplaceRLayer(dirPath + '/interpolatedSpi/'+ attribute + ".tif", attribute, attribute)
+                    #addOrReplaceRLayer(dirPath + '/interpolatedSpi/'+ attribute + ".tif", attribute, attribute)
 
-                    
+                    # Average spi is calculated within each ecoregion polygon
+                    nextAdress = dirPath + '/ecoregionFiles/ecoregions'+ attribute+'.shp'
                     processing.run("native:zonalstatisticsfb", 
-                    {'INPUT':oldAdress,
+                    {'INPUT':currentAdress,
                     'INPUT_RASTER':dirPath + '/interpolatedSpi/' + attribute+ '.tif',
                     'RASTER_BAND':1,
                     'COLUMN_PREFIX':attribute,
                     'STATISTICS':[2],
-                    'OUTPUT':dirPath + '/ecoregionFiles/ecoregionsWithSpis.shp'})
-                    addOrReplaceVLayer(dirPath + '/ecoregionFiles/ecoregionsWithSpis.shp', "test", "test")
-                    oldAdress = '/Users/nathanchou/Desktop/Nathan Chou Summer 2024 Research/ecoregionFiles/ecoregionsWithSpis.shp'
-                    #rasterLayer = project.mapLayersByName(attribute)[0]
-                    #zonal_stats = QgsZonalStatistics(vectorLayer, rasterLayer, attribute, QgsZonalStatistics.Mean)
-                    #zonal_stats.calculateStatistics(None)
-    #vectorLayer.commitChanges()
-    #vectorLayer.dataProvider().forceReload()                
-    stationLayer.commitChanges()                
+                    'OUTPUT':nextAdress})
+                    #addOrReplaceVLayer(nextAdress, attribute, attribute)
+                    currentAdress = dirPath + '/ecoregionFiles/ecoregions'+attribute+'.shp'
+        addOrReplaceVLayer(currentAdress, 'ecoregionsSplitNS', 'ecoregionsWithAverages' + str(rollingLength))
+    stationLayer.commitChanges()
+                    
+
+
+
+        
+def prepareAndPlot(layerName):
+
+    #make a dataframe out of layer data
+    layer = project.mapLayersByName(layerName)[0]
+    fieldnames = [field.name() for field in layer.fields()]
+    attributes = []
+    for f in layer.getFeatures():
+        attrs = f.attributes()
+        attributes.append(attrs)
+    df = pd.DataFrame(attributes)
+    df.columns = fieldnames
+    df = df.drop(['NA_L1CODE', 'NA_L1NAME', 'NA_L2KEY', 'NA_L1KEY', 'Shape_Leng'], axis = 1)
+
+    
+
+    # Define a function to calculate the weighted average
+    def weighted_average(toMerge):
+        areas = toMerge['Shape_Area']
+        justAverages = toMerge.drop(['Shape_Area', 'NA_L2CODE', 'NA_L2NAME', 'NS'], axis = 1)
+        downscaled = justAverages.mul(areas, axis = 0)
+        summed = downscaled.sum()
+        upscaled = summed.div(areas.sum())
+        return upscaled
+    
+
+
+    # Group by the first two columns and apply the weighted average function
+    ogRegions = df.groupby(['NA_L2NAME'], as_index = False).apply(weighted_average)
+    nsRegions = df.groupby(['NS'], as_index = False).apply(weighted_average)
+    
+    graphSets = {}
+    graphSets['Temperate Praries'] = ogRegions[ogRegions['NA_L2NAME'] == 'TEMPERATE PRAIRIES']
+    graphSets['West Central Praries']= ogRegions[ogRegions['NA_L2NAME'] == 'WEST-CENTRAL SEMIARID PRAIRIES']
+    graphSets['South Central Praries'] = ogRegions[ogRegions['NA_L2NAME'] == 'SOUTH CENTRAL SEMIARID PRAIRIES']
+    graphSets['Northern Praries'] = nsRegions[nsRegions['NS'] == QVariant(True)]
+    graphSets['Southern Praries'] = nsRegions[nsRegions['NS'] == QVariant(False)]
+
+    for set in graphSets: 
+         thisSet = graphSets[set]
+         thisSet = thisSet.drop(thisSet.columns[0], axis = 1).melt()
+         timeFrames = thisSet['variable'].str.split('-|\|', expand = True)
+         timeFrames.columns = ['Start Month', "End Month", 'Year']
+         timeFrames['Year'] = timeFrames['Year'].str.split('_', expand = True)[0]
+         thisSet = pd.concat([timeFrames, thisSet['value']], axis = 1)
+         thisSet = thisSet.pivot(columns = 'Year', index = ['Start Month', 'End Month'], values = 'value')
+         fig, axs = plt.subplots(7, 7, sharex=True, sharey=True, figsize=(20, 20))
+         for index, row in thisSet.iterrows():
+            axs[int(index[0])-1,int(index[1])-1].plot(row)
+            axs[int(index[0])-1,int(index[1])-1].set_title("Annual SPI based on months " + index[0] + "-" + index[1], fontsize=10)
+            axs[int(index[0])-1,int(index[1])-1].set_xlabel("Year: 2019-2023", fontsize=8)
+            axs[int(index[0])-1,int(index[1])-1].set_ylabel("Average Spi", fontsize=8)
+         plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05, wspace=0.4, hspace=0.6)
+         plt.suptitle(set + " annual SPI based on different portions of the year. Each months average spi calculated with " +  layerName[-1] +"  month rolling average")
+         plt.savefig(dirPath + '/final plots/' + set + " using " +  layerName[-1] +"  month(s) rolling avg" + '.png')
+
+
 
 #cleanData()
-#labelStiationsWithEcoregions()
 #calculateAverageSpi()
-
-stationLayer = project.mapLayersByName('stationsGdf')[0]
-stationLayer.startEditing()
-for year in range(2020, 2021):
-     attribute = months[1] + "-" + months[4]+ "|"+str(year-2000)+"_" + str(1)
-     stationLayer.addAttribute(QgsField(attribute, QVariant.Double))
-
-     start_date = pd.to_datetime(str(year) + "-" + str(1), format='%Y-%m')
-     end_date = pd.to_datetime(str(year) + "-" + str(4), format='%Y-%m')
-     spiDf = pd.read_pickle(dirPath + "/spiDf-rollingMonths"+str(1))
-     boundedSpiDf = spiDf.loc[:, (spiDf.columns >= start_date) & (spiDf.columns <= end_date)]
-    
-    
-     for station in stationLayer.getFeatures():
-         qvariant_double = QVariant(float(boundedSpiDf.loc[station['Station']].mean()))
-         station[attribute] = qvariant_double
-         stationLayer.updateFeature(station)
-    
-     attributeIdx = stationLayer.fields().indexOf(attribute)
-     processing.run("qgis:idwinterpolation", 
-     {'INTERPOLATION_DATA':dirPath + '/stationFiles/stationsGdf.shp::~::0::~::'+str(attributeIdx)+'::~::0',
-     'DISTANCE_COEFFICIENT':99,
-     'EXTENT':'-116.038827519,-89.618012962,28.596182276,54.486221541 [EPSG:4326]',
-     'PIXEL_SIZE':0.25,
-     'OUTPUT':dirPath + '/interpolatedSpi/'+ attribute + ".tif"})
-     addOrReplaceRLayer(dirPath + '/interpolatedSpi/'+ attribute + ".tif", attribute, attribute)
-
-    
-# processing.run("native:zonalstatisticsfb", 
-#                     {'INPUT':'/Users/nathanchou/Desktop/Nathan Chou Summer 2024 Research/ecoregionFiles/ecoregionsWithSpis.shp',
-#                     'INPUT_RASTER':dirPath + '/interpolatedSpi/' + '02-05|20_1'+ '.tif',
-#                     'RASTER_BAND':1,
-#                     'COLUMN_PREFIX':'02-05|20_1',
-#                     'STATISTICS':[2],
-#                     'OUTPUT':dirPath + '/ecoregionFiles/ecoregionsWithSpis.shp'})
-#addOrReplaceVLayer(dirPath + '/ecoregionFiles/ecoregionsWithSpis.shp', "test", "test")
-
-
-
+prepareAndPlot("ecoregionsWithAverages1")
+prepareAndPlot("ecoregionsWithAverages2")
+prepareAndPlot("ecoregionsWithAverages3")
