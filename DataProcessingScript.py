@@ -135,10 +135,11 @@ def calculateAverageSpi():
     # Using 1,2,3 month rolling average data provided
     for rollingLength in range(1,4):
         spiDf = pd.read_pickle(dirPath + "/spiDf-rollingMonths"+str(rollingLength))
-        currentAdress = dirPath +'/ecoregionFiles/splitNS.shp'
+        #currentAdress = dirPath +'/ecoregionsWithAverages' + str(rollingLength)
+        currentAdress = dirPath + '/ecoregionFiles/' + 'ecoregions07-07|23_' + str(rollingLength)+ ".shp"
         #We will calculate each years average from a variety of start months to end months
         for startMonth in range(1,8):
-            for endMonth in range(startMonth,8):
+            for endMonth in range(8,12):
                 # Looking across years from 2019 to 2023
                 for year in range(2019, 2024):
                     attribute = months[startMonth-1] + "-" + months[endMonth-1]+ "|"+str(year-2000)+"_" + str(rollingLength)
@@ -213,11 +214,11 @@ def prepareAndPlot(layerName):
     nsRegions = df.groupby(['NS'], as_index = False).apply(weighted_average)
     
     graphSets = {}
-    graphSets['Temperate Praries'] = ogRegions[ogRegions['NA_L2NAME'] == 'TEMPERATE PRAIRIES']
-    graphSets['West Central Praries']= ogRegions[ogRegions['NA_L2NAME'] == 'WEST-CENTRAL SEMIARID PRAIRIES']
-    graphSets['South Central Praries'] = ogRegions[ogRegions['NA_L2NAME'] == 'SOUTH CENTRAL SEMIARID PRAIRIES']
-    graphSets['Northern Praries'] = nsRegions[nsRegions['NS'] == QVariant(True)]
-    graphSets['Southern Praries'] = nsRegions[nsRegions['NS'] == QVariant(False)]
+    graphSets['Temperate Prairies'] = ogRegions[ogRegions['NA_L2NAME'] == 'TEMPERATE PRAIRIES']
+    graphSets['West Central Prairies']= ogRegions[ogRegions['NA_L2NAME'] == 'WEST-CENTRAL SEMIARID PRAIRIES']
+    graphSets['South Central Prairies'] = ogRegions[ogRegions['NA_L2NAME'] == 'SOUTH CENTRAL SEMIARID PRAIRIES']
+    graphSets['Northern Prairies'] = nsRegions[nsRegions['NS'] == QVariant(True)]
+    graphSets['Southern Prairies'] = nsRegions[nsRegions['NS'] == QVariant(False)]
 
     for set in graphSets: 
          thisSet = graphSets[set]
@@ -227,7 +228,8 @@ def prepareAndPlot(layerName):
          timeFrames['Year'] = timeFrames['Year'].str.split('_', expand = True)[0]
          thisSet = pd.concat([timeFrames, thisSet['value']], axis = 1)
          thisSet = thisSet.pivot(columns = 'Year', index = ['Start Month', 'End Month'], values = 'value')
-         fig, axs = plt.subplots(7, 7, sharex=True, sharey=True, figsize=(20, 20))
+         thisSet.to_csv(dirPath + "/final csv files/" + set + '_' + layerName[-1] + " month spi")
+         fig, axs = plt.subplots(12, 12, sharex=True, sharey=True, figsize=(30, 20))
          for index, row in thisSet.iterrows():
             axs[int(index[0])-1,int(index[1])-1].plot(row)
             axs[int(index[0])-1,int(index[1])-1].set_title("Annual SPI based on months " + index[0] + "-" + index[1], fontsize=10)
@@ -240,7 +242,64 @@ def prepareAndPlot(layerName):
 
 
 #cleanData()
-#calculateAverageSpi()
+calculateAverageSpi()
 prepareAndPlot("ecoregionsWithAverages1")
 prepareAndPlot("ecoregionsWithAverages2")
 prepareAndPlot("ecoregionsWithAverages3")
+
+
+
+
+#import matplotlib.pyplot as plt
+#
+## Data from the table
+#years = [2019, 2020, 2021, 2022, 2023]
+#west_central_semi_arid = [0.2722, -0.3139, -0.3976, -0.4371, -0.1968]
+#northern = [0.0797, -0.4107, -0.5129, -0.1845, -0.0498]
+#southern = [0.6345, -0.1785, 0.1612, -0.4113, -0.3797]
+#
+## Plotting the data
+#plt.figure(figsize=(10, 6))
+#plt.plot(years, west_central_semi_arid, marker='o', label='West-Central Semi-Arid')
+#plt.plot(years, northern, marker='o', label='Northern')
+#plt.plot(years, southern, marker='o', label='Southern')
+#
+## Adding titles and labels
+#plt.title('Mean 1 Month Standardized Precipitation Index From Mar to Jun')
+#plt.xlabel('Year')
+#plt.ylabel('Precipitation Index')
+#plt.legend()
+#plt.grid(True)
+#plt.xticks(years)
+#
+## Display the plot
+#plt.show()
+
+
+# import matplotlib.pyplot as plt
+# import pandas as pd
+
+# eBirdDf =pd.read_csv('/Users/nathanchou/Desktop/2024SummerResearch/originalData/eBirdData.csv', delimiter = "	")
+# eBirdDf = eBirdDf[['individualCount', 'decimalLatitude', 'decimalLongitude', 'day', 'month', 'year', 'scientificName']]
+# yearCountsAll = eBirdDf[['individualCount', 'year']].groupby('year').sum()
+# print(yearCounts)
+# print (eBirdDf['scientificName'].head())
+# justLeConteDf = eBirdDf[eBirdDf['scientificName'] == 'Ammospiza leconteii (Audubon, 1844)']
+# yearCountsLeConte = justLeConteDf[['individualCount', 'year']].groupby('year').sum()
+# print(yearCountsLeConte)
+# adjusted = yearCountsLeConte.div(yearCountsAll).mul(100)
+
+# plt.figure(figsize=(10, 6))
+# plt.plot(adjusted, marker='o', linestyle='-', color='b')
+
+# plt.title("LeConte's Sparrows as a percentage of EBird observations in Harris County")
+# plt.xlabel('Year')
+# plt.ylabel('Percentage')
+# plt.xticks(adjusted.index)
+# plt.grid(True)
+# plt.show()
+
+
+
+# plt.show()
+
