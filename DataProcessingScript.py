@@ -139,31 +139,31 @@ def calculateAverageSpi():
         currentAdress = dirPath + '/ecoregionFiles/' + 'ecoregions07-07|23_' + str(rollingLength)+ ".shp"
         #We will calculate each years average from a variety of start months to end months
         for startMonth in range(1,8):
-            for endMonth in range(8,12):
+            for endMonth in range(8,13):
                 # Looking across years from 2019 to 2023
                 for year in range(2019, 2024):
                     attribute = months[startMonth-1] + "-" + months[endMonth-1]+ "|"+str(year-2000)+"_" + str(rollingLength)
-                    stationLayer.addAttribute(QgsField(attribute, QVariant.Double))
+                    #stationLayer.addAttribute(QgsField(attribute, QVariant.Double))
 
                     start_date = pd.to_datetime(str(year) + "-" + str(startMonth), format='%Y-%m')
                     end_date = pd.to_datetime(str(year) + "-" + str(endMonth), format='%Y-%m')
-                    boundedSpiDf = spiDf.loc[:, (spiDf.columns >= start_date) & (spiDf.columns <= end_date)]
+                    #boundedSpiDf = spiDf.loc[:, (spiDf.columns >= start_date) & (spiDf.columns <= end_date)]
                     
                     # each station gets its average spi for each variation added to its attribute table
-                    for station in stationLayer.getFeatures():
-                        qvariant_double = QVariant(float(boundedSpiDf.loc[station['Station']].mean()))
-                        station[attribute] = qvariant_double
-                        stationLayer.updateFeature(station)
+                    #for station in stationLayer.getFeatures():
+                    #     qvariant_double = QVariant(float(boundedSpiDf.loc[station['Station']].mean()))
+                    #     station[attribute] = qvariant_double
+                    #     stationLayer.updateFeature(station)
                     
-                    # An interpolation is created to fill in the areas between attributes
-                    attributeIdx = stationLayer.fields().indexOf(attribute)
-                    processing.run("qgis:idwinterpolation", 
-                    {'INTERPOLATION_DATA':dirPath + '/stationFiles/stationsGdf.shp::~::0::~::'+str(attributeIdx)+'::~::0',
-                    'DISTANCE_COEFFICIENT':99,
-                    'EXTENT':'-116.038827519,-89.618012962,28.596182276,54.486221541 [EPSG:4326]',
-                    'PIXEL_SIZE':0.5,
-                    'OUTPUT':dirPath + '/interpolatedSpi/'+ attribute + ".tif"})
-                    #addOrReplaceRLayer(dirPath + '/interpolatedSpi/'+ attribute + ".tif", attribute, attribute)
+                    # # An interpolation is created to fill in the areas between attributes
+                    # attributeIdx = stationLayer.fields().indexOf(attribute)
+                    # processing.run("qgis:idwinterpolation", 
+                    # {'INTERPOLATION_DATA':dirPath + '/stationFiles/stationsGdf.shp::~::0::~::'+str(attributeIdx)+'::~::0',
+                    # 'DISTANCE_COEFFICIENT':99,
+                    # 'EXTENT':'-116.038827519,-89.618012962,28.596182276,54.486221541 [EPSG:4326]',
+                    # 'PIXEL_SIZE':0.5,
+                    # 'OUTPUT':dirPath + '/interpolatedSpi/'+ attribute + ".tif"})
+                    # #addOrReplaceRLayer(dirPath + '/interpolatedSpi/'+ attribute + ".tif", attribute, attribute)
 
                     # Average spi is calculated within each ecoregion polygon
                     nextAdress = dirPath + '/ecoregionFiles/ecoregions'+ attribute+'.shp'
@@ -229,10 +229,10 @@ def prepareAndPlot(layerName):
          thisSet = pd.concat([timeFrames, thisSet['value']], axis = 1)
          thisSet = thisSet.pivot(columns = 'Year', index = ['Start Month', 'End Month'], values = 'value')
          thisSet.to_csv(dirPath + "/final csv files/" + set + '_' + layerName[-1] + " month spi")
-         fig, axs = plt.subplots(12, 12, sharex=True, sharey=True, figsize=(30, 20))
+         fig, axs = plt.subplots(7, 12, sharex=True, sharey=True, figsize=(30, 20))
          for index, row in thisSet.iterrows():
             axs[int(index[0])-1,int(index[1])-1].plot(row)
-            axs[int(index[0])-1,int(index[1])-1].set_title("Annual SPI based on months " + index[0] + "-" + index[1], fontsize=10)
+            axs[int(index[0])-1,int(index[1])-1].set_title("Annual SPI based on months " + index[0] + "-" + index[1], fontsize=8)
             axs[int(index[0])-1,int(index[1])-1].set_xlabel("Year: 2019-2023", fontsize=8)
             axs[int(index[0])-1,int(index[1])-1].set_ylabel("Average Spi", fontsize=8)
          plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05, wspace=0.4, hspace=0.6)
@@ -242,7 +242,7 @@ def prepareAndPlot(layerName):
 
 
 #cleanData()
-calculateAverageSpi()
+#calculateAverageSpi()
 prepareAndPlot("ecoregionsWithAverages1")
 prepareAndPlot("ecoregionsWithAverages2")
 prepareAndPlot("ecoregionsWithAverages3")
