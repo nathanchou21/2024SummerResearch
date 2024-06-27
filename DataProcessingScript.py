@@ -228,16 +228,16 @@ def prepareAndPlot(layerName):
          timeFrames['Year'] = timeFrames['Year'].str.split('_', expand = True)[0]
          thisSet = pd.concat([timeFrames, thisSet['value']], axis = 1)
          thisSet = thisSet.pivot(columns = 'Year', index = ['Start Month', 'End Month'], values = 'value')
-         thisSet.to_csv(dirPath + "/final csv files/" + set + '_' + layerName[-1] + " month spi")
-         fig, axs = plt.subplots(7, 12, sharex=True, sharey=True, figsize=(30, 20))
-         for index, row in thisSet.iterrows():
-            axs[int(index[0])-1,int(index[1])-1].plot(row)
-            axs[int(index[0])-1,int(index[1])-1].set_title("Annual SPI based on months " + index[0] + "-" + index[1], fontsize=8)
-            axs[int(index[0])-1,int(index[1])-1].set_xlabel("Year: 2019-2023", fontsize=8)
-            axs[int(index[0])-1,int(index[1])-1].set_ylabel("Average Spi", fontsize=8)
-         plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05, wspace=0.4, hspace=0.6)
-         plt.suptitle("Annual SPIs in the " + set + " Region, Calculated With " +  layerName[-1] +" Month SPI Data")
-         plt.savefig(dirPath + '/final plots/' + set + " using " +  layerName[-1] +"  month(s) SPI data" + '.png')
+         thisSet.to_csv(dirPath + "/final csv files/" + set + '_' + layerName[-1] + " month spi.csv")
+        #  fig, axs = plt.subplots(7, 12, sharex=True, sharey=True, figsize=(30, 20))
+        #  for index, row in thisSet.iterrows():
+        #     axs[int(index[0])-1,int(index[1])-1].plot(row)
+        #     axs[int(index[0])-1,int(index[1])-1].set_title("Annual SPI based on months " + index[0] + "-" + index[1], fontsize=8)
+        #     axs[int(index[0])-1,int(index[1])-1].set_xlabel("Year: 2019-2023", fontsize=8)
+        #     axs[int(index[0])-1,int(index[1])-1].set_ylabel("Average Spi", fontsize=8)
+        #  plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05, wspace=0.4, hspace=0.6)
+        #  plt.suptitle("Annual SPIs in the " + set + " Region, Calculated With " +  layerName[-1] +" Month SPI Data")
+        #  plt.savefig(dirPath + '/final plots/' + set + " using " +  layerName[-1] +"  month(s) SPI data" + '.png')
 
 
 
