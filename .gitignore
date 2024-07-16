@@ -1,4 +1,6 @@
-originalData/eBirdData.csv
-*abundance.tif
-*abundancescaled.tif
-spi and abundance files/
+/Csv Files/*_sampling.txt
+/Csv Files/nabbs_data/
+/Csv Files/*_ebird.txt
+*normalized.tif
+/Dought Experienced by Species/scaled_interpolations/
+!.gitignore

@@ -1,0 +1,1110 @@
+,STATE,COUNTRY,Date,value
+0,Alaska,Canada,1983,2
+1,Alaska,Canada,1995,6
+2,Alaska,Canada,1996,7
+3,Alaska,Canada,1997,1148
+4,Alaska,Canada,1998,945
+5,Alaska,Canada,1999,891
+6,Alaska,Canada,2000,781
+7,Alaska,Canada,2001,719
+8,Alaska,Canada,2002,763
+9,Alaska,Canada,2003,848
+10,Alaska,Canada,2004,1090
+11,Alaska,Canada,2005,819
+12,Alaska,Canada,2006,917
+13,Alaska,Canada,2007,996
+14,Alaska,Canada,2008,1091
+15,Alaska,Canada,2009,976
+16,Alaska,Canada,2010,1068
+17,Alaska,Canada,2011,1085
+18,Alaska,Canada,2012,1067
+19,Alaska,Canada,2013,523
+20,Alaska,Canada,2014,635
+21,Alaska,Canada,2015,685
+22,Alaska,Canada,2016,505
+23,Alaska,Canada,2017,643
+24,Alaska,Canada,2018,548
+25,Alaska,Canada,2019,760
+26,Alaska,Canada,2021,594
+27,Alberta,United States,1968,5
+28,Alberta,United States,1990,24
+29,Alberta,United States,1993,18
+30,Alberta,United States,1996,632
+31,Alberta,United States,1997,2601
+32,Alberta,United States,1998,2797
+33,Alberta,United States,1999,2254
+34,Alberta,United States,2000,2710
+35,Alberta,United States,2001,2500
+36,Alberta,United States,2002,2037
+37,Alberta,United States,2003,2117
+38,Alberta,United States,2004,2192
+39,Alberta,United States,2005,2693
+40,Alberta,United States,2006,2723
+41,Alberta,United States,2007,3084
+42,Alberta,United States,2008,3330
+43,Alberta,United States,2009,3164
+44,Alberta,United States,2010,2881
+45,Alberta,United States,2011,2406
+46,Alberta,United States,2012,2333
+47,Alberta,United States,2013,2994
+48,Alberta,United States,2014,2216
+49,Alberta,United States,2015,2763
+50,Alberta,United States,2016,2645
+51,Alberta,United States,2017,2813
+52,Alberta,United States,2018,2568
+53,Alberta,United States,2019,2902
+54,Alberta,United States,2021,1614
+55,Arizona,Canada,1999,1
+56,Arizona,Canada,2004,1
+57,Arizona,Canada,2019,1
+58,British Columbia,United States,1972,25
+59,British Columbia,United States,1991,5
+60,British Columbia,United States,1994,18
+61,British Columbia,United States,1995,57
+62,British Columbia,United States,1996,13
+63,British Columbia,United States,1997,262
+64,British Columbia,United States,1998,274
+65,British Columbia,United States,1999,273
+66,British Columbia,United States,2000,253
+67,British Columbia,United States,2001,208
+68,British Columbia,United States,2002,207
+69,British Columbia,United States,2003,244
+70,British Columbia,United States,2004,273
+71,British Columbia,United States,2005,241
+72,British Columbia,United States,2006,304
+73,British Columbia,United States,2007,241
+74,British Columbia,United States,2008,228
+75,British Columbia,United States,2009,232
+76,British Columbia,United States,2010,286
+77,British Columbia,United States,2011,264
+78,British Columbia,United States,2012,241
+79,British Columbia,United States,2013,211
+80,British Columbia,United States,2014,305
+81,British Columbia,United States,2015,461
+82,British Columbia,United States,2016,380
+83,British Columbia,United States,2017,332
+84,British Columbia,United States,2018,351
+85,British Columbia,United States,2019,418
+86,British Columbia,United States,2021,219
+87,California,Canada,1997,307
+88,California,Canada,1998,260
+89,California,Canada,1999,269
+90,California,Canada,2000,242
+91,California,Canada,2001,183
+92,California,Canada,2002,189
+93,California,Canada,2003,183
+94,California,Canada,2004,172
+95,California,Canada,2005,176
+96,California,Canada,2006,162
+97,California,Canada,2007,179
+98,California,Canada,2008,147
+99,California,Canada,2009,146
+100,California,Canada,2010,130
+101,California,Canada,2011,133
+102,California,Canada,2012,136
+103,California,Canada,2013,149
+104,California,Canada,2014,98
+105,California,Canada,2015,142
+106,California,Canada,2016,98
+107,California,Canada,2017,113
+108,California,Canada,2018,135
+109,California,Canada,2019,108
+110,California,Canada,2021,22
+111,Colorado,Canada,1997,156
+112,Colorado,Canada,1998,191
+113,Colorado,Canada,1999,191
+114,Colorado,Canada,2000,247
+115,Colorado,Canada,2001,182
+116,Colorado,Canada,2002,188
+117,Colorado,Canada,2003,174
+118,Colorado,Canada,2004,173
+119,Colorado,Canada,2005,185
+120,Colorado,Canada,2006,218
+121,Colorado,Canada,2007,274
+122,Colorado,Canada,2008,175
+123,Colorado,Canada,2009,219
+124,Colorado,Canada,2010,251
+125,Colorado,Canada,2011,225
+126,Colorado,Canada,2012,208
+127,Colorado,Canada,2013,160
+128,Colorado,Canada,2014,213
+129,Colorado,Canada,2015,289
+130,Colorado,Canada,2016,311
+131,Colorado,Canada,2017,202
+132,Colorado,Canada,2018,191
+133,Colorado,Canada,2019,187
+134,Colorado,Canada,2021,160
+135,Connecticut,Canada,1997,2
+136,Connecticut,Canada,1998,5
+137,Connecticut,Canada,1999,2
+138,Connecticut,Canada,2000,2
+139,Connecticut,Canada,2001,2
+140,Connecticut,Canada,2002,3
+141,Connecticut,Canada,2003,4
+142,Connecticut,Canada,2004,1
+143,Connecticut,Canada,2005,2
+144,Connecticut,Canada,2006,1
+145,Connecticut,Canada,2007,8
+146,Connecticut,Canada,2008,3
+147,Connecticut,Canada,2011,2
+148,Connecticut,Canada,2012,2
+149,Connecticut,Canada,2016,1
+150,Connecticut,Canada,2021,1
+151,Delaware,Canada,2010,0
+152,Idaho,Canada,1997,206
+153,Idaho,Canada,1998,208
+154,Idaho,Canada,1999,238
+155,Idaho,Canada,2000,228
+156,Idaho,Canada,2001,170
+157,Idaho,Canada,2002,190
+158,Idaho,Canada,2003,184
+159,Idaho,Canada,2004,170
+160,Idaho,Canada,2005,251
+161,Idaho,Canada,2006,212
+162,Idaho,Canada,2007,236
+163,Idaho,Canada,2008,215
+164,Idaho,Canada,2009,260
+165,Idaho,Canada,2010,188
+166,Idaho,Canada,2011,143
+167,Idaho,Canada,2012,159
+168,Idaho,Canada,2013,167
+169,Idaho,Canada,2014,191
+170,Idaho,Canada,2015,195
+171,Idaho,Canada,2016,220
+172,Idaho,Canada,2017,205
+173,Idaho,Canada,2018,174
+174,Idaho,Canada,2019,126
+175,Idaho,Canada,2021,77
+176,Illinois,Canada,1996,8
+177,Illinois,Canada,1997,75
+178,Illinois,Canada,1998,69
+179,Illinois,Canada,1999,38
+180,Illinois,Canada,2000,50
+181,Illinois,Canada,2001,62
+182,Illinois,Canada,2002,74
+183,Illinois,Canada,2003,69
+184,Illinois,Canada,2004,56
+185,Illinois,Canada,2005,64
+186,Illinois,Canada,2006,62
+187,Illinois,Canada,2007,60
+188,Illinois,Canada,2008,69
+189,Illinois,Canada,2009,52
+190,Illinois,Canada,2010,80
+191,Illinois,Canada,2011,81
+192,Illinois,Canada,2012,56
+193,Illinois,Canada,2013,45
+194,Illinois,Canada,2014,33
+195,Illinois,Canada,2015,33
+196,Illinois,Canada,2016,31
+197,Illinois,Canada,2017,32
+198,Illinois,Canada,2018,29
+199,Illinois,Canada,2019,63
+200,Illinois,Canada,2021,20
+201,Indiana,Canada,1997,108
+202,Indiana,Canada,1998,84
+203,Indiana,Canada,1999,147
+204,Indiana,Canada,2000,171
+205,Indiana,Canada,2001,158
+206,Indiana,Canada,2002,141
+207,Indiana,Canada,2003,152
+208,Indiana,Canada,2004,151
+209,Indiana,Canada,2005,127
+210,Indiana,Canada,2006,73
+211,Indiana,Canada,2007,88
+212,Indiana,Canada,2008,79
+213,Indiana,Canada,2009,69
+214,Indiana,Canada,2010,99
+215,Indiana,Canada,2011,64
+216,Indiana,Canada,2012,63
+217,Indiana,Canada,2013,61
+218,Indiana,Canada,2014,38
+219,Indiana,Canada,2015,46
+220,Indiana,Canada,2016,64
+221,Indiana,Canada,2017,64
+222,Indiana,Canada,2018,76
+223,Indiana,Canada,2019,71
+224,Indiana,Canada,2021,52
+225,Iowa,Canada,1996,17
+226,Iowa,Canada,1997,69
+227,Iowa,Canada,1998,72
+228,Iowa,Canada,1999,71
+229,Iowa,Canada,2000,49
+230,Iowa,Canada,2001,18
+231,Iowa,Canada,2002,7
+232,Iowa,Canada,2003,37
+233,Iowa,Canada,2004,15
+234,Iowa,Canada,2005,39
+235,Iowa,Canada,2006,25
+236,Iowa,Canada,2007,24
+237,Iowa,Canada,2008,19
+238,Iowa,Canada,2009,22
+239,Iowa,Canada,2010,10
+240,Iowa,Canada,2011,14
+241,Iowa,Canada,2012,24
+242,Iowa,Canada,2013,22
+243,Iowa,Canada,2014,6
+244,Iowa,Canada,2015,8
+245,Iowa,Canada,2016,15
+246,Iowa,Canada,2017,3
+247,Iowa,Canada,2018,3
+248,Iowa,Canada,2019,19
+249,Iowa,Canada,2021,2
+250,Kentucky,Canada,1998,1
+251,Kentucky,Canada,2005,2
+252,Kentucky,Canada,2006,1
+253,Kentucky,Canada,2007,2
+254,Kentucky,Canada,2008,3
+255,Kentucky,Canada,2009,1
+256,Kentucky,Canada,2015,1
+257,Kentucky,Canada,2017,1
+258,Northwest Territories,United States,1997,4
+259,Northwest Territories,United States,1998,6
+260,Northwest Territories,United States,1999,4
+261,Northwest Territories,United States,2000,3
+262,Northwest Territories,United States,2001,1
+263,Northwest Territories,United States,2002,3
+264,Northwest Territories,United States,2003,8
+265,Northwest Territories,United States,2004,45
+266,Northwest Territories,United States,2005,63
+267,Northwest Territories,United States,2006,68
+268,Northwest Territories,United States,2007,24
+269,Northwest Territories,United States,2008,21
+270,Northwest Territories,United States,2009,17
+271,Northwest Territories,United States,2010,18
+272,Northwest Territories,United States,2011,15
+273,Northwest Territories,United States,2012,44
+274,Northwest Territories,United States,2013,40
+275,Northwest Territories,United States,2014,17
+276,Northwest Territories,United States,2015,36
+277,Northwest Territories,United States,2016,36
+278,Northwest Territories,United States,2017,49
+279,Northwest Territories,United States,2018,55
+280,Northwest Territories,United States,2019,256
+281,Northwest Territories,United States,2021,193
+282,Maine,Canada,1994,3
+283,Maine,Canada,1996,1
+284,Maine,Canada,1997,247
+285,Maine,Canada,1998,208
+286,Maine,Canada,1999,96
+287,Maine,Canada,2000,60
+288,Maine,Canada,2001,64
+289,Maine,Canada,2002,66
+290,Maine,Canada,2003,46
+291,Maine,Canada,2004,169
+292,Maine,Canada,2005,214
+293,Maine,Canada,2006,62
+294,Maine,Canada,2007,58
+295,Maine,Canada,2008,96
+296,Maine,Canada,2009,69
+297,Maine,Canada,2010,42
+298,Maine,Canada,2011,66
+299,Maine,Canada,2012,35
+300,Maine,Canada,2013,22
+301,Maine,Canada,2014,27
+302,Maine,Canada,2015,47
+303,Maine,Canada,2016,65
+304,Maine,Canada,2017,28
+305,Maine,Canada,2018,56
+306,Maine,Canada,2019,57
+307,Maine,Canada,2021,25
+308,Manitoba,United States,1977,1
+309,Manitoba,United States,1995,20
+310,Manitoba,United States,1997,1415
+311,Manitoba,United States,1998,1626
+312,Manitoba,United States,1999,1608
+313,Manitoba,United States,2000,1602
+314,Manitoba,United States,2001,1760
+315,Manitoba,United States,2002,1349
+316,Manitoba,United States,2003,1441
+317,Manitoba,United States,2004,1129
+318,Manitoba,United States,2005,1113
+319,Manitoba,United States,2006,1553
+320,Manitoba,United States,2007,2038
+321,Manitoba,United States,2008,2017
+322,Manitoba,United States,2009,1951
+323,Manitoba,United States,2010,1770
+324,Manitoba,United States,2011,1468
+325,Manitoba,United States,2012,1660
+326,Manitoba,United States,2013,1146
+327,Manitoba,United States,2014,998
+328,Manitoba,United States,2015,1655
+329,Manitoba,United States,2016,1667
+330,Manitoba,United States,2017,1364
+331,Manitoba,United States,2018,1500
+332,Manitoba,United States,2019,1314
+333,Manitoba,United States,2021,997
+334,Maryland,Canada,1997,41
+335,Maryland,Canada,1998,29
+336,Maryland,Canada,1999,31
+337,Maryland,Canada,2000,30
+338,Maryland,Canada,2001,42
+339,Maryland,Canada,2002,25
+340,Maryland,Canada,2003,37
+341,Maryland,Canada,2004,18
+342,Maryland,Canada,2005,22
+343,Maryland,Canada,2006,24
+344,Maryland,Canada,2007,17
+345,Maryland,Canada,2008,23
+346,Maryland,Canada,2009,36
+347,Maryland,Canada,2010,24
+348,Maryland,Canada,2011,25
+349,Maryland,Canada,2012,20
+350,Maryland,Canada,2013,20
+351,Maryland,Canada,2014,16
+352,Maryland,Canada,2015,32
+353,Maryland,Canada,2016,35
+354,Maryland,Canada,2017,24
+355,Maryland,Canada,2018,23
+356,Maryland,Canada,2019,12
+357,Maryland,Canada,2021,15
+358,Massachusetts,Canada,1997,5
+359,Massachusetts,Canada,1998,12
+360,Massachusetts,Canada,1999,15
+361,Massachusetts,Canada,2000,13
+362,Massachusetts,Canada,2001,11
+363,Massachusetts,Canada,2002,7
+364,Massachusetts,Canada,2003,8
+365,Massachusetts,Canada,2004,8
+366,Massachusetts,Canada,2005,13
+367,Massachusetts,Canada,2006,11
+368,Massachusetts,Canada,2007,11
+369,Massachusetts,Canada,2008,17
+370,Massachusetts,Canada,2009,14
+371,Massachusetts,Canada,2010,10
+372,Massachusetts,Canada,2011,15
+373,Massachusetts,Canada,2012,10
+374,Massachusetts,Canada,2013,13
+375,Massachusetts,Canada,2014,10
+376,Massachusetts,Canada,2015,5
+377,Massachusetts,Canada,2016,10
+378,Massachusetts,Canada,2017,5
+379,Massachusetts,Canada,2018,7
+380,Massachusetts,Canada,2019,10
+381,Massachusetts,Canada,2021,7
+382,Michigan,Canada,1996,76
+383,Michigan,Canada,1997,606
+384,Michigan,Canada,1998,575
+385,Michigan,Canada,1999,618
+386,Michigan,Canada,2000,627
+387,Michigan,Canada,2001,603
+388,Michigan,Canada,2002,357
+389,Michigan,Canada,2003,394
+390,Michigan,Canada,2004,493
+391,Michigan,Canada,2005,504
+392,Michigan,Canada,2006,515
+393,Michigan,Canada,2007,530
+394,Michigan,Canada,2008,528
+395,Michigan,Canada,2009,565
+396,Michigan,Canada,2010,445
+397,Michigan,Canada,2011,388
+398,Michigan,Canada,2012,364
+399,Michigan,Canada,2013,380
+400,Michigan,Canada,2014,285
+401,Michigan,Canada,2015,327
+402,Michigan,Canada,2016,310
+403,Michigan,Canada,2017,318
+404,Michigan,Canada,2018,144
+405,Michigan,Canada,2019,170
+406,Michigan,Canada,2021,102
+407,Minnesota,Canada,1997,1024
+408,Minnesota,Canada,1998,759
+409,Minnesota,Canada,1999,861
+410,Minnesota,Canada,2000,634
+411,Minnesota,Canada,2001,740
+412,Minnesota,Canada,2002,323
+413,Minnesota,Canada,2003,752
+414,Minnesota,Canada,2004,1002
+415,Minnesota,Canada,2005,913
+416,Minnesota,Canada,2006,776
+417,Minnesota,Canada,2007,1101
+418,Minnesota,Canada,2008,1011
+419,Minnesota,Canada,2009,1001
+420,Minnesota,Canada,2010,1054
+421,Minnesota,Canada,2011,940
+422,Minnesota,Canada,2012,913
+423,Minnesota,Canada,2013,871
+424,Minnesota,Canada,2014,893
+425,Minnesota,Canada,2015,701
+426,Minnesota,Canada,2016,663
+427,Minnesota,Canada,2017,560
+428,Minnesota,Canada,2018,427
+429,Minnesota,Canada,2019,526
+430,Minnesota,Canada,2021,326
+431,Missouri,Canada,2002,2
+432,Missouri,Canada,2005,1
+433,Missouri,Canada,2010,2
+434,Missouri,Canada,2011,1
+435,Missouri,Canada,2012,1
+436,Missouri,Canada,2019,6
+437,Missouri,Canada,2021,1
+438,Montana,Canada,1997,895
+439,Montana,Canada,1998,977
+440,Montana,Canada,1999,525
+441,Montana,Canada,2000,689
+442,Montana,Canada,2001,623
+443,Montana,Canada,2002,511
+444,Montana,Canada,2003,568
+445,Montana,Canada,2004,484
+446,Montana,Canada,2005,581
+447,Montana,Canada,2006,618
+448,Montana,Canada,2007,612
+449,Montana,Canada,2008,479
+450,Montana,Canada,2009,531
+451,Montana,Canada,2010,636
+452,Montana,Canada,2011,611
+453,Montana,Canada,2012,582
+454,Montana,Canada,2013,665
+455,Montana,Canada,2014,719
+456,Montana,Canada,2015,1265
+457,Montana,Canada,2016,1174
+458,Montana,Canada,2017,1505
+459,Montana,Canada,2018,1292
+460,Montana,Canada,2019,1301
+461,Montana,Canada,2021,810
+462,Nebraska,Canada,1997,2
+463,Nebraska,Canada,1999,3
+464,Nebraska,Canada,2000,3
+465,Nebraska,Canada,2001,1
+466,Nebraska,Canada,2002,2
+467,Nebraska,Canada,2005,2
+468,Nebraska,Canada,2009,1
+469,Nevada,Canada,1996,2
+470,Nevada,Canada,1997,13
+471,Nevada,Canada,1998,26
+472,Nevada,Canada,1999,35
+473,Nevada,Canada,2000,22
+474,Nevada,Canada,2001,38
+475,Nevada,Canada,2002,30
+476,Nevada,Canada,2003,26
+477,Nevada,Canada,2004,21
+478,Nevada,Canada,2005,23
+479,Nevada,Canada,2006,15
+480,Nevada,Canada,2007,10
+481,Nevada,Canada,2008,5
+482,Nevada,Canada,2009,9
+483,Nevada,Canada,2010,5
+484,Nevada,Canada,2011,14
+485,Nevada,Canada,2012,15
+486,Nevada,Canada,2013,17
+487,Nevada,Canada,2014,14
+488,Nevada,Canada,2015,12
+489,Nevada,Canada,2016,7
+490,Nevada,Canada,2017,9
+491,Nevada,Canada,2018,7
+492,Nevada,Canada,2019,7
+493,Nevada,Canada,2021,6
+494,New Brunswick,United States,1996,8
+495,New Brunswick,United States,1997,153
+496,New Brunswick,United States,1998,165
+497,New Brunswick,United States,1999,127
+498,New Brunswick,United States,2000,140
+499,New Brunswick,United States,2001,164
+500,New Brunswick,United States,2002,158
+501,New Brunswick,United States,2003,92
+502,New Brunswick,United States,2004,122
+503,New Brunswick,United States,2005,99
+504,New Brunswick,United States,2006,115
+505,New Brunswick,United States,2007,109
+506,New Brunswick,United States,2008,60
+507,New Brunswick,United States,2009,103
+508,New Brunswick,United States,2010,65
+509,New Brunswick,United States,2011,117
+510,New Brunswick,United States,2012,100
+511,New Brunswick,United States,2013,135
+512,New Brunswick,United States,2014,44
+513,New Brunswick,United States,2015,100
+514,New Brunswick,United States,2016,81
+515,New Brunswick,United States,2017,98
+516,New Brunswick,United States,2018,73
+517,New Brunswick,United States,2019,86
+518,New Brunswick,United States,2021,112
+519,Newfoundland and Labrador,United States,1995,7
+520,Newfoundland and Labrador,United States,1997,42
+521,Newfoundland and Labrador,United States,1998,45
+522,Newfoundland and Labrador,United States,1999,41
+523,Newfoundland and Labrador,United States,2000,19
+524,Newfoundland and Labrador,United States,2001,82
+525,Newfoundland and Labrador,United States,2002,48
+526,Newfoundland and Labrador,United States,2003,169
+527,Newfoundland and Labrador,United States,2004,159
+528,Newfoundland and Labrador,United States,2005,130
+529,Newfoundland and Labrador,United States,2006,191
+530,Newfoundland and Labrador,United States,2007,187
+531,Newfoundland and Labrador,United States,2008,122
+532,Newfoundland and Labrador,United States,2009,86
+533,Newfoundland and Labrador,United States,2010,79
+534,Newfoundland and Labrador,United States,2011,228
+535,Newfoundland and Labrador,United States,2012,203
+536,Newfoundland and Labrador,United States,2013,87
+537,Newfoundland and Labrador,United States,2014,252
+538,Newfoundland and Labrador,United States,2015,112
+539,Newfoundland and Labrador,United States,2016,126
+540,Newfoundland and Labrador,United States,2017,227
+541,Newfoundland and Labrador,United States,2018,199
+542,Newfoundland and Labrador,United States,2019,160
+543,Newfoundland and Labrador,United States,2021,71
+544,New Hampshire,Canada,1997,16
+545,New Hampshire,Canada,1998,26
+546,New Hampshire,Canada,1999,37
+547,New Hampshire,Canada,2000,22
+548,New Hampshire,Canada,2001,32
+549,New Hampshire,Canada,2002,21
+550,New Hampshire,Canada,2003,24
+551,New Hampshire,Canada,2004,41
+552,New Hampshire,Canada,2005,31
+553,New Hampshire,Canada,2006,36
+554,New Hampshire,Canada,2007,27
+555,New Hampshire,Canada,2008,25
+556,New Hampshire,Canada,2009,27
+557,New Hampshire,Canada,2010,29
+558,New Hampshire,Canada,2011,14
+559,New Hampshire,Canada,2012,18
+560,New Hampshire,Canada,2013,18
+561,New Hampshire,Canada,2014,22
+562,New Hampshire,Canada,2015,12
+563,New Hampshire,Canada,2016,17
+564,New Hampshire,Canada,2017,19
+565,New Hampshire,Canada,2018,12
+566,New Hampshire,Canada,2019,16
+567,New Hampshire,Canada,2021,7
+568,New Jersey,Canada,1999,1
+569,New Jersey,Canada,2003,2
+570,New Jersey,Canada,2004,1
+571,New Jersey,Canada,2007,1
+572,New Jersey,Canada,2010,5
+573,New Jersey,Canada,2014,2
+574,New Jersey,Canada,2015,2
+575,New Jersey,Canada,2016,1
+576,New Jersey,Canada,2017,2
+577,New Jersey,Canada,2018,3
+578,New Jersey,Canada,2019,2
+579,New Jersey,Canada,2021,5
+580,New Mexico,Canada,1997,34
+581,New Mexico,Canada,1998,26
+582,New Mexico,Canada,1999,4
+583,New Mexico,Canada,2000,15
+584,New Mexico,Canada,2001,27
+585,New Mexico,Canada,2002,15
+586,New Mexico,Canada,2003,4
+587,New Mexico,Canada,2004,1
+588,New Mexico,Canada,2005,5
+589,New Mexico,Canada,2006,4
+590,New Mexico,Canada,2007,6
+591,New Mexico,Canada,2008,8
+592,New Mexico,Canada,2009,3
+593,New Mexico,Canada,2010,2
+594,New Mexico,Canada,2011,4
+595,New Mexico,Canada,2012,3
+596,New Mexico,Canada,2013,2
+597,New Mexico,Canada,2014,6
+598,New Mexico,Canada,2015,6
+599,New Mexico,Canada,2016,8
+600,New Mexico,Canada,2017,9
+601,New Mexico,Canada,2018,7
+602,New Mexico,Canada,2019,6
+603,New Mexico,Canada,2021,5
+604,New York,Canada,1995,39
+605,New York,Canada,1996,29
+606,New York,Canada,1997,827
+607,New York,Canada,1998,664
+608,New York,Canada,1999,582
+609,New York,Canada,2000,583
+610,New York,Canada,2001,529
+611,New York,Canada,2002,442
+612,New York,Canada,2003,378
+613,New York,Canada,2004,374
+614,New York,Canada,2005,361
+615,New York,Canada,2006,390
+616,New York,Canada,2007,330
+617,New York,Canada,2008,419
+618,New York,Canada,2009,397
+619,New York,Canada,2010,379
+620,New York,Canada,2011,316
+621,New York,Canada,2012,294
+622,New York,Canada,2013,248
+623,New York,Canada,2014,243
+624,New York,Canada,2015,231
+625,New York,Canada,2016,262
+626,New York,Canada,2017,265
+627,New York,Canada,2018,368
+628,New York,Canada,2019,307
+629,New York,Canada,2021,230
+630,Nunavut,United States,2001,29
+631,Nunavut,United States,2002,12
+632,Nunavut,United States,2004,12
+633,Nunavut,United States,2005,31
+634,Nunavut,United States,2009,26
+635,Nunavut,United States,2010,14
+636,Nunavut,United States,2011,6
+637,Nunavut,United States,2012,13
+638,Nunavut,United States,2013,16
+639,Nunavut,United States,2014,17
+640,Nunavut,United States,2015,7
+641,Nunavut,United States,2016,4
+642,Nunavut,United States,2017,10
+643,North Carolina,Canada,2009,4
+644,North Carolina,Canada,2010,2
+645,North Carolina,Canada,2011,4
+646,North Carolina,Canada,2012,2
+647,North Carolina,Canada,2013,2
+648,North Carolina,Canada,2014,3
+649,North Carolina,Canada,2015,5
+650,North Carolina,Canada,2016,5
+651,North Carolina,Canada,2017,2
+652,North Carolina,Canada,2018,3
+653,North Carolina,Canada,2019,2
+654,North Carolina,Canada,2021,2
+655,North Dakota,Canada,1996,137
+656,North Dakota,Canada,1997,704
+657,North Dakota,Canada,1998,694
+658,North Dakota,Canada,1999,878
+659,North Dakota,Canada,2000,870
+660,North Dakota,Canada,2001,962
+661,North Dakota,Canada,2002,864
+662,North Dakota,Canada,2003,1046
+663,North Dakota,Canada,2004,848
+664,North Dakota,Canada,2005,808
+665,North Dakota,Canada,2006,772
+666,North Dakota,Canada,2007,839
+667,North Dakota,Canada,2008,987
+668,North Dakota,Canada,2009,819
+669,North Dakota,Canada,2010,857
+670,North Dakota,Canada,2011,918
+671,North Dakota,Canada,2012,863
+672,North Dakota,Canada,2013,1027
+673,North Dakota,Canada,2014,801
+674,North Dakota,Canada,2015,999
+675,North Dakota,Canada,2016,996
+676,North Dakota,Canada,2017,1001
+677,North Dakota,Canada,2018,832
+678,North Dakota,Canada,2019,724
+679,North Dakota,Canada,2021,268
+680,Nova Scotia,United States,1995,13
+681,Nova Scotia,United States,1996,6
+682,Nova Scotia,United States,1997,197
+683,Nova Scotia,United States,1998,170
+684,Nova Scotia,United States,1999,217
+685,Nova Scotia,United States,2000,195
+686,Nova Scotia,United States,2001,148
+687,Nova Scotia,United States,2002,114
+688,Nova Scotia,United States,2003,86
+689,Nova Scotia,United States,2004,107
+690,Nova Scotia,United States,2005,126
+691,Nova Scotia,United States,2006,134
+692,Nova Scotia,United States,2007,89
+693,Nova Scotia,United States,2008,102
+694,Nova Scotia,United States,2009,84
+695,Nova Scotia,United States,2010,99
+696,Nova Scotia,United States,2011,61
+697,Nova Scotia,United States,2012,79
+698,Nova Scotia,United States,2013,75
+699,Nova Scotia,United States,2014,87
+700,Nova Scotia,United States,2015,86
+701,Nova Scotia,United States,2016,105
+702,Nova Scotia,United States,2017,95
+703,Nova Scotia,United States,2018,87
+704,Nova Scotia,United States,2019,65
+705,Nova Scotia,United States,2021,72
+706,Ohio,Canada,1995,13
+707,Ohio,Canada,1996,6
+708,Ohio,Canada,1997,342
+709,Ohio,Canada,1998,256
+710,Ohio,Canada,1999,303
+711,Ohio,Canada,2000,275
+712,Ohio,Canada,2001,289
+713,Ohio,Canada,2002,233
+714,Ohio,Canada,2003,201
+715,Ohio,Canada,2004,136
+716,Ohio,Canada,2005,150
+717,Ohio,Canada,2006,117
+718,Ohio,Canada,2007,129
+719,Ohio,Canada,2008,137
+720,Ohio,Canada,2009,146
+721,Ohio,Canada,2010,163
+722,Ohio,Canada,2011,156
+723,Ohio,Canada,2012,129
+724,Ohio,Canada,2013,123
+725,Ohio,Canada,2014,95
+726,Ohio,Canada,2015,92
+727,Ohio,Canada,2016,66
+728,Ohio,Canada,2017,61
+729,Ohio,Canada,2018,71
+730,Ohio,Canada,2019,67
+731,Ohio,Canada,2021,43
+732,Ontario,United States,1968,115
+733,Ontario,United States,1993,86
+734,Ontario,United States,1996,195
+735,Ontario,United States,1997,2079
+736,Ontario,United States,1998,1964
+737,Ontario,United States,1999,1935
+738,Ontario,United States,2000,1591
+739,Ontario,United States,2001,1597
+740,Ontario,United States,2002,1261
+741,Ontario,United States,2003,1340
+742,Ontario,United States,2004,1250
+743,Ontario,United States,2005,1407
+744,Ontario,United States,2006,1608
+745,Ontario,United States,2007,1451
+746,Ontario,United States,2008,1580
+747,Ontario,United States,2009,1673
+748,Ontario,United States,2010,1616
+749,Ontario,United States,2011,1352
+750,Ontario,United States,2012,1441
+751,Ontario,United States,2013,1408
+752,Ontario,United States,2014,1116
+753,Ontario,United States,2015,1101
+754,Ontario,United States,2016,1121
+755,Ontario,United States,2017,957
+756,Ontario,United States,2018,1131
+757,Ontario,United States,2019,1011
+758,Ontario,United States,2021,816
+759,Oregon,Canada,1997,459
+760,Oregon,Canada,1998,454
+761,Oregon,Canada,1999,449
+762,Oregon,Canada,2000,362
+763,Oregon,Canada,2001,351
+764,Oregon,Canada,2002,324
+765,Oregon,Canada,2003,295
+766,Oregon,Canada,2004,345
+767,Oregon,Canada,2005,363
+768,Oregon,Canada,2006,306
+769,Oregon,Canada,2007,252
+770,Oregon,Canada,2008,252
+771,Oregon,Canada,2009,257
+772,Oregon,Canada,2010,280
+773,Oregon,Canada,2011,264
+774,Oregon,Canada,2012,302
+775,Oregon,Canada,2013,280
+776,Oregon,Canada,2014,201
+777,Oregon,Canada,2015,192
+778,Oregon,Canada,2016,167
+779,Oregon,Canada,2017,269
+780,Oregon,Canada,2018,245
+781,Oregon,Canada,2019,224
+782,Oregon,Canada,2021,244
+783,Pennsylvania,Canada,1996,27
+784,Pennsylvania,Canada,1997,272
+785,Pennsylvania,Canada,1998,220
+786,Pennsylvania,Canada,1999,209
+787,Pennsylvania,Canada,2000,202
+788,Pennsylvania,Canada,2001,190
+789,Pennsylvania,Canada,2002,192
+790,Pennsylvania,Canada,2003,198
+791,Pennsylvania,Canada,2004,190
+792,Pennsylvania,Canada,2005,152
+793,Pennsylvania,Canada,2006,125
+794,Pennsylvania,Canada,2007,140
+795,Pennsylvania,Canada,2008,169
+796,Pennsylvania,Canada,2009,143
+797,Pennsylvania,Canada,2010,120
+798,Pennsylvania,Canada,2011,139
+799,Pennsylvania,Canada,2012,151
+800,Pennsylvania,Canada,2013,144
+801,Pennsylvania,Canada,2014,100
+802,Pennsylvania,Canada,2015,96
+803,Pennsylvania,Canada,2016,97
+804,Pennsylvania,Canada,2017,92
+805,Pennsylvania,Canada,2018,77
+806,Pennsylvania,Canada,2019,86
+807,Pennsylvania,Canada,2021,62
+808,Prince Edward Island,United States,1997,63
+809,Prince Edward Island,United States,1998,73
+810,Prince Edward Island,United States,1999,65
+811,Prince Edward Island,United States,2000,101
+812,Prince Edward Island,United States,2001,94
+813,Prince Edward Island,United States,2002,89
+814,Prince Edward Island,United States,2003,95
+815,Prince Edward Island,United States,2004,87
+816,Prince Edward Island,United States,2005,26
+817,Prince Edward Island,United States,2006,110
+818,Prince Edward Island,United States,2007,132
+819,Prince Edward Island,United States,2008,52
+820,Prince Edward Island,United States,2009,54
+821,Prince Edward Island,United States,2010,73
+822,Prince Edward Island,United States,2011,59
+823,Prince Edward Island,United States,2012,41
+824,Prince Edward Island,United States,2013,70
+825,Prince Edward Island,United States,2014,73
+826,Prince Edward Island,United States,2015,79
+827,Prince Edward Island,United States,2016,66
+828,Prince Edward Island,United States,2017,47
+829,Prince Edward Island,United States,2018,50
+830,Prince Edward Island,United States,2019,41
+831,Prince Edward Island,United States,2021,47
+832,Quebec,United States,1968,59
+833,Quebec,United States,1993,7
+834,Quebec,United States,1996,54
+835,Quebec,United States,1997,852
+836,Quebec,United States,1998,956
+837,Quebec,United States,1999,820
+838,Quebec,United States,2000,751
+839,Quebec,United States,2001,690
+840,Quebec,United States,2002,421
+841,Quebec,United States,2003,436
+842,Quebec,United States,2004,497
+843,Quebec,United States,2005,594
+844,Quebec,United States,2006,706
+845,Quebec,United States,2007,634
+846,Quebec,United States,2008,646
+847,Quebec,United States,2009,629
+848,Quebec,United States,2010,543
+849,Quebec,United States,2011,510
+850,Quebec,United States,2012,604
+851,Quebec,United States,2013,511
+852,Quebec,United States,2014,516
+853,Quebec,United States,2015,501
+854,Quebec,United States,2016,641
+855,Quebec,United States,2017,582
+856,Quebec,United States,2018,492
+857,Quebec,United States,2019,624
+858,Quebec,United States,2021,401
+859,Rhode Island,Canada,1998,1
+860,Rhode Island,Canada,2002,2
+861,Rhode Island,Canada,2005,6
+862,Rhode Island,Canada,2006,1
+863,Rhode Island,Canada,2017,1
+864,Saskatchewan,United States,1982,49
+865,Saskatchewan,United States,1991,6
+866,Saskatchewan,United States,1993,22
+867,Saskatchewan,United States,1996,348
+868,Saskatchewan,United States,1997,986
+869,Saskatchewan,United States,1998,978
+870,Saskatchewan,United States,1999,958
+871,Saskatchewan,United States,2000,1191
+872,Saskatchewan,United States,2001,1292
+873,Saskatchewan,United States,2002,1089
+874,Saskatchewan,United States,2003,1038
+875,Saskatchewan,United States,2004,1032
+876,Saskatchewan,United States,2005,1084
+877,Saskatchewan,United States,2006,1059
+878,Saskatchewan,United States,2007,684
+879,Saskatchewan,United States,2008,909
+880,Saskatchewan,United States,2009,763
+881,Saskatchewan,United States,2010,815
+882,Saskatchewan,United States,2011,851
+883,Saskatchewan,United States,2012,975
+884,Saskatchewan,United States,2013,872
+885,Saskatchewan,United States,2014,1096
+886,Saskatchewan,United States,2015,1124
+887,Saskatchewan,United States,2016,1044
+888,Saskatchewan,United States,2017,1259
+889,Saskatchewan,United States,2018,1139
+890,Saskatchewan,United States,2019,1062
+891,Saskatchewan,United States,2021,319
+892,South Dakota,Canada,1997,43
+893,South Dakota,Canada,1998,36
+894,South Dakota,Canada,1999,73
+895,South Dakota,Canada,2000,95
+896,South Dakota,Canada,2001,53
+897,South Dakota,Canada,2002,71
+898,South Dakota,Canada,2003,69
+899,South Dakota,Canada,2004,66
+900,South Dakota,Canada,2005,73
+901,South Dakota,Canada,2006,58
+902,South Dakota,Canada,2007,58
+903,South Dakota,Canada,2008,89
+904,South Dakota,Canada,2009,150
+905,South Dakota,Canada,2010,116
+906,South Dakota,Canada,2011,131
+907,South Dakota,Canada,2012,122
+908,South Dakota,Canada,2013,71
+909,South Dakota,Canada,2014,111
+910,South Dakota,Canada,2015,117
+911,South Dakota,Canada,2016,67
+912,South Dakota,Canada,2017,99
+913,South Dakota,Canada,2018,72
+914,South Dakota,Canada,2019,68
+915,South Dakota,Canada,2021,35
+916,Tennessee,Canada,2005,0
+917,Tennessee,Canada,2006,1
+918,Tennessee,Canada,2008,0
+919,Utah,Canada,1997,141
+920,Utah,Canada,1998,221
+921,Utah,Canada,1999,182
+922,Utah,Canada,2000,89
+923,Utah,Canada,2001,102
+924,Utah,Canada,2002,101
+925,Utah,Canada,2003,109
+926,Utah,Canada,2004,90
+927,Utah,Canada,2005,114
+928,Utah,Canada,2006,68
+929,Utah,Canada,2007,94
+930,Utah,Canada,2008,96
+931,Utah,Canada,2009,92
+932,Utah,Canada,2010,69
+933,Utah,Canada,2011,120
+934,Utah,Canada,2012,142
+935,Utah,Canada,2013,130
+936,Utah,Canada,2014,51
+937,Utah,Canada,2015,113
+938,Utah,Canada,2016,131
+939,Utah,Canada,2017,137
+940,Utah,Canada,2018,110
+941,Utah,Canada,2019,105
+942,Utah,Canada,2021,104
+943,Vermont,Canada,1996,1
+944,Vermont,Canada,1997,67
+945,Vermont,Canada,1998,74
+946,Vermont,Canada,1999,83
+947,Vermont,Canada,2000,65
+948,Vermont,Canada,2001,48
+949,Vermont,Canada,2002,33
+950,Vermont,Canada,2003,42
+951,Vermont,Canada,2004,48
+952,Vermont,Canada,2005,55
+953,Vermont,Canada,2006,66
+954,Vermont,Canada,2007,61
+955,Vermont,Canada,2008,70
+956,Vermont,Canada,2009,68
+957,Vermont,Canada,2010,53
+958,Vermont,Canada,2011,54
+959,Vermont,Canada,2012,43
+960,Vermont,Canada,2013,53
+961,Vermont,Canada,2014,34
+962,Vermont,Canada,2015,32
+963,Vermont,Canada,2016,44
+964,Vermont,Canada,2017,41
+965,Vermont,Canada,2018,37
+966,Vermont,Canada,2019,38
+967,Vermont,Canada,2021,44
+968,Virginia,Canada,1997,1
+969,Virginia,Canada,1998,2
+970,Virginia,Canada,1999,5
+971,Virginia,Canada,2000,5
+972,Virginia,Canada,2001,2
+973,Virginia,Canada,2002,2
+974,Virginia,Canada,2003,1
+975,Virginia,Canada,2004,4
+976,Virginia,Canada,2005,4
+977,Virginia,Canada,2006,4
+978,Virginia,Canada,2007,1
+979,Virginia,Canada,2008,2
+980,Virginia,Canada,2009,3
+981,Virginia,Canada,2010,1
+982,Virginia,Canada,2011,2
+983,Virginia,Canada,2012,1
+984,Virginia,Canada,2013,1
+985,Virginia,Canada,2014,3
+986,Virginia,Canada,2015,1
+987,Virginia,Canada,2018,2
+988,Virginia,Canada,2019,2
+989,Virginia,Canada,2021,3
+990,Washington,Canada,1996,12
+991,Washington,Canada,1997,496
+992,Washington,Canada,1998,599
+993,Washington,Canada,1999,516
+994,Washington,Canada,2000,504
+995,Washington,Canada,2001,470
+996,Washington,Canada,2002,461
+997,Washington,Canada,2003,454
+998,Washington,Canada,2004,609
+999,Washington,Canada,2005,611
+1000,Washington,Canada,2006,543
+1001,Washington,Canada,2007,454
+1002,Washington,Canada,2008,450
+1003,Washington,Canada,2009,441
+1004,Washington,Canada,2010,479
+1005,Washington,Canada,2011,297
+1006,Washington,Canada,2012,414
+1007,Washington,Canada,2013,337
+1008,Washington,Canada,2014,302
+1009,Washington,Canada,2015,320
+1010,Washington,Canada,2016,283
+1011,Washington,Canada,2017,242
+1012,Washington,Canada,2018,310
+1013,Washington,Canada,2019,360
+1014,Washington,Canada,2021,281
+1015,West Virginia,Canada,1997,11
+1016,West Virginia,Canada,1998,8
+1017,West Virginia,Canada,1999,10
+1018,West Virginia,Canada,2000,1
+1019,West Virginia,Canada,2001,3
+1020,West Virginia,Canada,2002,2
+1021,West Virginia,Canada,2003,4
+1022,West Virginia,Canada,2004,2
+1023,West Virginia,Canada,2005,1
+1024,West Virginia,Canada,2006,9
+1025,West Virginia,Canada,2007,1
+1026,West Virginia,Canada,2009,2
+1027,West Virginia,Canada,2010,6
+1028,West Virginia,Canada,2011,5
+1029,West Virginia,Canada,2012,3
+1030,West Virginia,Canada,2013,2
+1031,West Virginia,Canada,2015,9
+1032,West Virginia,Canada,2016,7
+1033,West Virginia,Canada,2017,2
+1034,West Virginia,Canada,2018,4
+1035,West Virginia,Canada,2019,6
+1036,West Virginia,Canada,2021,2
+1037,Wisconsin,Canada,1997,1872
+1038,Wisconsin,Canada,1998,2166
+1039,Wisconsin,Canada,1999,1859
+1040,Wisconsin,Canada,2000,1747
+1041,Wisconsin,Canada,2001,1694
+1042,Wisconsin,Canada,2002,1673
+1043,Wisconsin,Canada,2003,1480
+1044,Wisconsin,Canada,2004,1372
+1045,Wisconsin,Canada,2005,1341
+1046,Wisconsin,Canada,2006,1378
+1047,Wisconsin,Canada,2007,1413
+1048,Wisconsin,Canada,2008,1422
+1049,Wisconsin,Canada,2009,1471
+1050,Wisconsin,Canada,2010,1363
+1051,Wisconsin,Canada,2011,1254
+1052,Wisconsin,Canada,2012,1036
+1053,Wisconsin,Canada,2013,874
+1054,Wisconsin,Canada,2014,809
+1055,Wisconsin,Canada,2015,748
+1056,Wisconsin,Canada,2016,615
+1057,Wisconsin,Canada,2017,642
+1058,Wisconsin,Canada,2018,506
+1059,Wisconsin,Canada,2019,543
+1060,Wisconsin,Canada,2021,432
+1061,Wyoming,Canada,1997,294
+1062,Wyoming,Canada,1998,281
+1063,Wyoming,Canada,1999,325
+1064,Wyoming,Canada,2000,317
+1065,Wyoming,Canada,2001,218
+1066,Wyoming,Canada,2002,205
+1067,Wyoming,Canada,2003,205
+1068,Wyoming,Canada,2004,137
+1069,Wyoming,Canada,2005,233
+1070,Wyoming,Canada,2006,276
+1071,Wyoming,Canada,2007,222
+1072,Wyoming,Canada,2008,192
+1073,Wyoming,Canada,2009,185
+1074,Wyoming,Canada,2010,172
+1075,Wyoming,Canada,2011,161
+1076,Wyoming,Canada,2012,192
+1077,Wyoming,Canada,2013,181
+1078,Wyoming,Canada,2014,256
+1079,Wyoming,Canada,2015,202
+1080,Wyoming,Canada,2016,196
+1081,Wyoming,Canada,2017,193
+1082,Wyoming,Canada,2018,170
+1083,Wyoming,Canada,2019,192
+1084,Wyoming,Canada,2021,250
+1085,Yukon,United States,1997,20
+1086,Yukon,United States,1998,27
+1087,Yukon,United States,1999,22
+1088,Yukon,United States,2000,37
+1089,Yukon,United States,2001,24
+1090,Yukon,United States,2002,33
+1091,Yukon,United States,2003,74
+1092,Yukon,United States,2004,59
+1093,Yukon,United States,2005,125
+1094,Yukon,United States,2006,92
+1095,Yukon,United States,2007,74
+1096,Yukon,United States,2008,84
+1097,Yukon,United States,2009,64
+1098,Yukon,United States,2010,127
+1099,Yukon,United States,2011,102
+1100,Yukon,United States,2012,79
+1101,Yukon,United States,2013,60
+1102,Yukon,United States,2014,65
+1103,Yukon,United States,2015,67
+1104,Yukon,United States,2016,83
+1105,Yukon,United States,2017,73
+1106,Yukon,United States,2018,72
+1107,Yukon,United States,2019,76
+1108,Yukon,United States,2021,57
